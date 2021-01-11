@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+   
+   <style>
+        *{
+            margin:0;
+            padding:0;
+            background-color: #28262e;
+            color: #e8e8e8;
+        }
+       
+        header{
+            clear: both;
+        }
+        .advertising{
+            width: 90%;
+            margin: 0 auto;
+            border-top: 1px solid #e8e8e8;
+        	padding:30px;
+        }
+        .view{
+            position: relative;            
+        }
+        .advertising .view h2{
+            position: absolute;
+            left: 50px;
+            bottom: 100px;
+            font-size: 24px;
+            color:#ffffff;
+            background:none !important;
+        }
+        .advertising .view p{
+            position: absolute;
+            left: 50px;
+            bottom: 70px;
+            color:#ffffff;
+            background:none !important;
+        }
+        .vod_bar .view h2{
+            position: absolute;
+            left: 50px;
+            bottom: 50px;
+            font-size: 20px;
+            color:#ffffff;
+            background:none !important;
+        }
+        h1{
+            padding-left: 50px;
+            padding-bottom: 20px;
+        }
+        .bx-wrapper{
+            box-shadow: none;
+            background: none;
+            border: none;
+        }
+        
+        footer h3{
+            padding:20px;
+            border-top: 1px solid #e8e8e8;
+            border-bottom: 1px solid #e8e8e8;
+        }
+        footer p{
+            padding:20px;
+            
+        }
+        /*로그인 창*/
+        #pop{
+            width:200px;
+            border: 1px solid #246CFF;
+            display: none;
+            position: absolute;
+            top:50px;
+            right: 100px;
+        }
+        #title{
+            background-color: #6799FF ;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            padding:5px;
+        }
+        input{
+            width: 200px; 
+            height: 50px;
+            font-size: 18px;
+            box-sizing: border-box;
+        }
+        button{
+            width:100px;
+            height: 50px;            
+            font-size: 18px;
+            background-color: #28262e;
+            border: none;
+            box-sizing: border-box; 
+        }
+        button:hover{
+            background-color: #B8B8B8;
+        }
+		#logo{
+			width: 150px;
+	        height: 40px;
+	        margin:25px 80px; 
+   			font-size: 20px;
+	        box-sizing: border-box;
+	        float: left;
+	        text-shadow: 0px 10px  #9ac551, 0px 10px #556b2f, 0px 10px #899e65;
+		}
+		ul{
+        list-style-type: none;
+        display: inline-block;
+    	}
+    	li{
+        margin: 25px 30px;
+        position:relative;
+		right:50px;
+        float: right;
+		}
+		li > a:link,li > a:visited {	
+		text-decoration: none;	
+		text-align: center;
+		padding: 20px 30px;
+        float: right;
+        
+	}
+    </style>
+    <script>
+        $(function(){
+            $(".advertising").bxSlider({
+                maxSlides:4,
+                minSlides:1,
+                slideWidth:640,
+                moveSlides:1,
+                touchEnabled :false
+            });
+            $(".vod_bar").bxSlider({
+                maxSlides:10,
+                minSlides:1,
+                slideWidth:360,
+                moveSlides:4,
+                touchEnabled :false
+            });
+            $(".view").click(function(e){
+                alert("VOD 접속 오류");
+            });
+            $("#login").click(function(){
+                $("#pop").css("display","block");
+            });
+           
+            $("#pop form").submit(function (e) {
+               if($("#id").val().length < 1){
+                   alert("아이디를 반드시 입력하세요");
+                   e.preventDefault();
+                   return;
+                }
+                if($("#pass").val().length < 1){
+                    alert("암호를 반드시 입력하세요");
+                    e.preventDefault();
+                    return;
+               }
+               
+
+            });
+        });
+    </script>
+</head>
+<body>
+    <nav>
+        <div id="logo">QuickMedia</div>
+        <ul>
+            <li><a href="#" id="login">로그인</a></li>
+            <li><a href="#">찜</a></li>
+            <li><a href="#">실시간 방송</a></li>
+            <li><a href="#">카테고리</a></li>
+            <li><a href="#">홈</a></li>
+        </ul>
+    </nav>
+    <header>
+        <div class="advertising">
+            <div class="view">
+                <img src="img/poster.jpg" alt="">
+                <h2>VOD 제목</h2>
+                <p>VOD 내용</p>
+            </div>
+            <div class="view">
+                <img src="img/poster.jpg" alt="">
+                <h2>VOD 제목</h2>
+                <p>VOD 내용</p>
+            </div>
+            <div class="view">
+                <img src="img/poster.jpg" alt="">
+                <h2>VOD 제목</h2>
+                <p>VOD 내용</p>
+            </div>
+            <div class="view">
+                <img src="img/poster.jpg" alt="">
+                <h2>VOD 제목</h2>
+                <p>VOD 내용</p>
+            </div>
+            <div class="view">
+                <img src="img/poster.jpg" alt="">
+                <h2>VOD 제목</h2>
+                <p>VOD 내용</p>
+            </div>
+        </div>
+    </header>
+    <aside>
+        <h1>지금 핫한 VOD 목록</h1>
+        <div class="vod_bar">
+            <div class="view">
+                <img src="img/thumnail.jpg" alt="">
+                <h2>VOD 제목</h2>
+            </div>
+            <div class="view">
+                <img src="img/thumnail.jpg" alt="">
+                <h2>VOD 제목</h2>
+            </div>
+            <div class="view">
+                <img src="img/thumnail.jpg" alt="">
+                <h2>VOD 제목</h2>
+            </div>
+            <div class="view">
+                <img src="img/thumnail.jpg" alt="">
+                <h2>VOD 제목</h2>
+            </div>
+            <div class="view">
+                <img src="img/thumnail.jpg" alt="">
+                <h2>VOD 제목</h2>
+            </div>
+            <div class="view">
+                <img src="img/thumnail.jpg" alt="">
+                <h2>VOD 제목</h2>
+            </div>
+            <div class="view">
+                <img src="img/thumnail.jpg" alt="">
+                <h2>VOD 제목</h2>
+            </div>
+            <div class="view">
+                <img src="img/thumnail.jpg" alt="">
+                <h2>VOD 제목</h2>
+            </div>
+            <div class="view">
+                <img src="img/thumnail.jpg" alt="">
+                <h2>VOD 제목</h2>
+            </div>
+            <div class="view">
+                <img src="img/thumnail.jpg" alt="">
+                <h2>VOD 제목</h2>
+            </div>
+            <div class="view">
+                <img src="img/thumnail.jpg" alt="">
+                <h2>VOD 제목</h2>
+            </div>
+        </div>
+    </aside>
+    <section>
+        <h1>사용자 추천 VOD</h1>
+        <div class="vod_bar">
+            <div class="view">
+                <img src="img/section.jpg" alt="">
+                <h2>VOD 제목</h2>
+            </div>
+            <div class="view">
+                <img src="img/section.jpg" alt="">
+                <h2>VOD 제목</h2>
+            </div>
+            <div class="view">
+                <img src="img/section.jpg" alt="">
+                <h2>VOD 제목</h2>
+            </div>
+            <div class="view">
+                <img src="img/section.jpg" alt="">
+                <h2>VOD 제목</h2>
+            </div>
+            <div class="view">
+                <img src="img/section.jpg" alt="">
+                <h2>VOD 제목</h2>
+            </div>
+            <div class="view">
+                <img src="img/section.jpg" alt="">
+                <h2>VOD 제목</h2>
+            </div>
+            <div class="view">
+                <img src="img/section.jpg" alt="">
+                <h2>VOD 제목</h2>
+            </div>
+            <div class="view">
+                <img src="img/section.jpg" alt="">
+                <h2>VOD 제목</h2>
+            </div>
+            <div class="view">
+                <img src="img/section.jpg" alt="">
+                <h2>VOD 제목</h2>
+            </div>
+            <div class="view">
+                <img src="img/section.jpg" alt="">
+                <h2>VOD 제목</h2>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <h3>
+            <span>공지사항</span> <span>QuickMedia 접속 불량 현상 해결 공지</span>
+        </h3>
+        <p>
+            회사명 : QuickMedia<br>
+            대표이사 : 홍길동<br>
+            사업자번호 : 000-000-00000<br>
+            주소 : 서울시 강서구 화곡동<br>
+            고객센터 : 0000-0000
+        </p>
+    </footer>
+    <div id="pop">
+        
+    </div>
+</body>
+</html>

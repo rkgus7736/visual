@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>display</title>
+	<style>
+		/*가로길이가 잡히면 정확히 얼마나 쓸건지 계산해서 실행하면됨*/
+		.area{
+			width: 400px;
+			height: 300px;
+			border: 1px solid black;		
+			display: inline-block; /*글자,문단 둘 다로 취급*/	
+			font-size: 16px;
+			box-sizing: border-box;
+		}
+		#container{
+			width: 1200px;
+			border: 1px solid red;
+			background-color: lime;
+			margin: 0 auto;
+			font-size: 0px;
+		}
+	
+	</style>
+</head>
+<body>
+ 	<div id="container">
+		<div class="area">1</div>
+		<div class="area">2</div>
+		<div class="area">3</div>
+		<div class="area">4</div>
+		<div class="area">5</div>
+	
+	</div>
+</body>
+</html>

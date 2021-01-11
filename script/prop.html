@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='jquery-3.5.1.min.js'></script>
+<script>
+    //prop란? 속성 값을 읽어오는게 attr 이나 prop으로 나뉨
+    $(function(){
+        console.log($("#ch1").prop("checked") + " " + typeof $("#ch1").prop("checked"));
+        console.log($("#ch2").prop("checked"));
+        console.log($("#ch3").prop("checked"));
+		console.log(typeof $("#ch3").is(":checked"));
+		$("#ch3").attr("checked",true); //attr : 직접적인 html의 속성 값을 가져옴 
+		console.log($("#ch3").prop("checked")+ " "+typeof $("#ch3").attr("checked"));
+		
+		console.log($("#selected").prop("selectedIndex"));
+	});
+    });
+</script>
+</head>
+<body>
+    <input type="checkbox" name="check" id="ch1">체크박스1<br>
+    <input type="checkbox" name="check" id="ch2" checked>체크박스2<br>
+    <input type="checkbox" name="check" id="ch3">체크박스3<br>
+    <hr>
+    <select id="selectbox">
+        <option value="A">1</option>
+        <option value="B">2</option>
+        <option value="C">3</option>
+        <option value="D">4</option>
+    </select>
+</body>
+</html>

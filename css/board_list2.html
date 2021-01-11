@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>게시판 글목록</title>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+}
+tbody{
+    border-bottom: 2px solid gray;
+}
+
+
+tfoot td{
+    padding-top: 10px;
+}
+a:link, a:visited{
+    padding:10px;
+    color:black;
+    background-color:#e8e8e8;
+    text-decoration:none;
+}
+a:hover{
+    background-color: gray;
+    color: white;
+
+}
+.btn{
+    border-radius: 15px;
+    padding: 20px 30px ;
+}
+
+</head>
+<body>
+	<h2>자유게시판</h2>
+	<table>
+	<caption>
+		<select>
+			<option>10개씩 보기</option>
+			<option selected>15개씩 보기</option>
+			<option>20개씩 보기</option>
+		</select>
+	</caption>
+		<thead>
+			<tr>
+				<th>No.</th>
+				<th>title</th>
+				<th>count</th>
+				<th>date</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>6</td>
+				<td>제목</td>
+				<td>45657</td>
+				<td>2010-11-19</td>
+			</tr>		
+			<tr>
+				<td>5</td>
+				<td>제목</td>
+				<td>45657</td>
+				<td>2010-11-19</td>
+			</tr>		
+			<tr>
+				<td>4</td>
+				<td>제목</td>
+				<td>45657</td>
+				<td>2010-11-19</td>
+			</tr>		
+			<tr>
+				<td>2</td>
+				<td>제목</td> 
+				<td>45657</td>
+				<td>2010-11-19</td>
+			</tr>		
+			<tr>
+				<td>1</td>
+				<td>제목</td>
+				<td>45657</td>
+				<td>2010-11-19</td>
+			</tr>		
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="4">
+					<a href="#">&lt;</a>
+					<a href="#">1</a>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>					
+					<a href="#">&gt;</a>
+					<a href="#" class="btn">글쓰기</a>
+				</td>
+			</tr>		
+		</tfoot>
+	</table>
+</body>
+</html>
+
+
+
+
+
+
+

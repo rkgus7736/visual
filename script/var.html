@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='jquery-3.5.1.min.js'></script>
+<script>
+     $(function(){
+        console.log($("#id").val()); //input 태그의 value 속성 값을 읽어오는 부분
+        $("#id").val("b1111"); // input 태그의 value 속성 값 변경 - input에는 b1111이 뜨지만 콘솔에는 a0001이 나옴
+     });
+</script>
+</head>
+<body>
+        <!--로그인-->
+        <label>아이디<input type="text" id="id" value="a0001"></label><br>
+        <label>암호<input type="password" id="pass"></label><br>
+        <button id="btn">--로그인--</button>
+
+
+</body>
+</html>

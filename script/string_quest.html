@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>이름과 번호 뒷 4자리</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+<script>
+    var name = prompt("영문 이름을 입력해주세요");
+    var tel = prompt("전화번호를 입력해주세요");
+
+    name = name.toUpperCase();
+    tel = tel.substr(0,tel.length-4)+"****";
+    document.write(name,"<br>");
+    document.write(tel,"<br>");
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>

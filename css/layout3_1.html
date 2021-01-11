@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	*{
+		margin:0;
+		padding:0;
+	}	
+	nav{
+		width:1200px;
+		background-color: #e5e5e5;
+		text-align: center;
+		margin:0 auto;
+	}
+	ul{
+		list-style-type: none;
+		display: inline-block;
+	}
+	li{
+		float:left;
+	}
+	/*	그룹선택자
+		링크가 걸려있는 상태
+	*/
+	a:link, a:visited{
+		width:200px;
+		height: 50px;
+		padding:15px 0px;
+		font-size: 20px;
+		line-height: 20px;
+		display: inline-block;
+		box-sizing: border-box;
+		color:black;
+		text-decoration: none;
+	}
+	a:hover{
+		font-weight: bold;
+		text-decoration: underline;
+	}	
+	a:active {
+		color: red;
+	}
+	section{
+		width:1200px;
+		margin:0 auto;
+		/* border : 1px solid black; */
+		padding: 30px;
+		
+	}
+	figure{
+		width:300px;
+		height: 400px;
+		/* border :1px solid red; */
+		box-sizing: border-box;
+		display: inline-block;
+		padding:10px 5px 10px 5px;
+	}
+	img{
+		width: 100%;
+		height: 300px;
+	}
+	footer{
+		height: 300px;
+		background-color: #e8e8e8;
+	}
+</style>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li><a href="#">HOME</a></li>
+			<li><a href="#">회사소개</a></li>
+			<li><a href="#">브로슈어</a></li>
+			<li><a href="#">QnA</a></li>
+			<li><a href="#">오시는길</a></li>
+		</ul>
+	</nav>
+	<section>
+		<figure>
+			<img alt="" src="resource/img/food1.jpg">
+			<figcaption>
+				<h3 class="fic_title">콘텐츠 제목</h3>
+				<p class="fic_content">콘텐츠 내용</p>
+			</figcaption>
+		</figure><figure><img alt="" src="resource/img/food1.jpg">
+			<figcaption>
+				<h3 class="fic_title">콘텐츠 제목</h3>
+				<p class="fic_content">콘텐츠 내용</p>
+			</figcaption>
+		</figure><figure>
+			<img alt="" src="resource/img/food1.jpg">
+			<figcaption>
+				<h3 class="fic_title">콘텐츠 제목</h3>
+				<p class="fic_content">콘텐츠 내용</p>
+			</figcaption>
+		</figure><figure>
+			<img alt="" src="resource/img/food1.jpg">
+			<figcaption>
+				<h3 class="fic_title">콘텐츠 제목</h3>
+				<p class="fic_content">콘텐츠 내용</p>
+			</figcaption>
+		</figure><figure>
+			<img alt="" src="resource/img/food1.jpg">
+			<figcaption>
+				<h3 class="fic_title">콘텐츠 제목</h3>
+				<p class="fic_content">콘텐츠 내용</p>
+			</figcaption>
+		</figure>
+	</section>
+	<div class="popup">
+		<a href="#" title="해당 이벤트 페이지로 이동" class="pop_content">
+			<img alt="" src="resource/img/food2.jpg" class="pop_img">
+		</a>
+		<div class="popup_bar">
+			<button>다시보지않기</button><button>닫기</button>
+		</div>
+	</div>	
+	<style>
+		.popup{
+			width: 300px;
+			height: 300px;
+			border:1px solid black;
+			position: absolute;
+			top : 200px;
+			right:400px;
+			z-index: 1;
+			background-color: white;
+		}
+		.pop_img{
+			width: 300px;
+			height: 250px;
+		}
+		.pop_content{
+			position: absolute;
+			top:0px;
+			width: 100%;
+			height: 250px;			
+			display: inline-block;
+			padding:0px !important;
+			
+		}
+		.popup_bar{
+			width: 100%;
+			height: 50px;
+			position: absolute;
+			bottom:0px;
+		}
+		button{
+			width: 50%;
+			height:100%;
+			border: 1px outset; #e8e8e8;
+			box-sizing: border-box;			
+		}
+	</style>
+	<footer>
+	
+	</footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

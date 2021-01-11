@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>list_board</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+<style>
+    *{
+        margin: 0;
+        padding:0;
+    }
+    h1{
+        margin: 20px auto;
+        text-align: center;
+    }
+    div{
+        margin: 10px auto;
+        width: 800px;
+        height: 500px;
+        border: 1px solid black;
+        box-sizing: border-box;
+        display: inline-block;
+        list-style-type: none;
+       
+    }
+    caption{
+        margin: 50px auto;
+
+    }
+    table{
+        border-collapse: collapse;
+        
+    }
+    tr{
+        height: 40px;
+    }
+    th:nth-child(1){
+        width: 100px;
+        
+    }
+    th:nth-child(2){
+        width: 700px;
+        
+    }
+    th:nth-child(3){
+        width: 100px;
+        
+    }
+    th:nth-child(4){
+        width: 100px;
+    }
+    td{
+        text-align:left;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    th,td{
+        box-sizing: border-box;
+        height: 10px;
+        margin: 0px auto;
+        text-align: center;
+        border-bottom: 2px solid #e8e8e8;
+        padding: 0px 0px;
+    }
+    #back{
+        background-color: #e5e5e5;
+    }
+    #bar{
+        width: 800px;
+        height: 50px;
+        text-align: center;
+        background-color: #e5e5e5;
+
+    }
+    .top{
+        border-top: 2px solid #e8e8e8;
+    }
+    .page{
+
+    }
+    #write{
+        border:1px solid cornflowerblue;
+        background-color: cornflowerblue;
+        float: right;
+        box-sizing: border-box;
+    }
+    #click{
+        border:1px solid cornflowerblue;
+        background-color: cornflowerblue;
+        box-sizing: border-box;
+    }
+    
+   
+</style>
+</head>
+<body>
+<div>
+     <h1>자유게시판</h1>
+    <caption class="choose">
+        <select>
+            <option value="0">10개씩 보기</option>
+            <option value="1">20개씩 보기</option>
+            <option value="2">30개씩 보기</option>
+        </select>
+    </caption>
+    <div class="list">
+        <table>
+            <th id="back">No.</th>
+            <th id="back">title</th>
+        
+            <th id="back">count</th>
+            <th id="back">date</th>
+            <tr>
+            <td>6</td><td>제목</td><td>22</td><td>2010-11-19</td>
+            </tr>
+            <tr>
+            <td>5</td><td>제목</td><td>324</td><td>2010-11-19</td>
+            </tr>
+            <tr>
+                <td>4</td><td>제목</td><td>456</td><td>2010-11-19</td>
+            </tr>
+            <tr>
+            <td>3</td><td>제목</td><td>345</td><td>2010-11-19</td>
+            </tr>
+            <tr>
+            <td>2</td><td>제목</td><td>2</td><td>2010-11-19</td>
+            </tr>
+            <tr>
+            <td>1</td><td>제목</td><td>0</td><td>2010-11-19</td>
+            </tr>
+     </table>
+    
+    <tfoot>
+        <td colspan="4">
+            <a href="#"></a>
+        </td>
+        <button class="page">&lt;</button>
+        <button class="page">1</button>
+        <button id="click">2</button>
+        <button class="page">3</button>
+        <button class="page">4</button>
+        <button class="page">&gt;</button>
+    </tfoot>
+    <nav id="write">
+        <button><a href="#" id="click">글쓰기</a></button>
+    </nav>
+</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+
+<script type="text/javascript">
+	window.onsubmit = function(){ / - 내가 submit(로그인)버튼을 눌렀을 때 발생하는 이벤트
+		alert("TEST");  / alert - 경고창 띄우기
+		if(document.frm.id.value == ""){  / document.frm.id.value - 자바에서 .찍으면 '뭐뭐안에 있는것' 과 같은 뜻
+		alert("아이디를 입력하세요"); 
+		return false;
+		}
+		if(document.frm.pass.value == ""){ / document에 있는 내가 입력한(value) pass의 값을 꺼내오겠다.
+			alert("암호를 입력하세요");
+			return false;
+	}
+</script>
+--------------------------------------------------------------
+<form action="" name="frm">
+	아이디: <input type="text" name ="id"><br>
+	암호: <input type="password" name ="pass"><br>
+	<button>로그인</button>
+	
+</form>

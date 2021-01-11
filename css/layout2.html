@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>쇼핑몰</title>
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	.product_list{
+		width: 95%;
+		overflow: auto; /* 자동으로 필요한것만 넣어줌 auto랑 scroll 둘 다 써보기*/
+		white-space: nowrap; /*줄바꿈 방지*/
+		text-overflow: clip; /*화면 벗어나는건 안보여주겠다*/
+		margin: 0 auto;
+		}
+	img {
+		width: 250px;
+		height: 200px;
+		margin-left: 20px;
+	}
+	nav{
+		width: 200px;
+		height:800px;/*어차피 자동으로 바뀜 임시*/
+		float: left;
+		position: fixed;
+		
+		/*display: inline-block; *//*nav와 section에 둘 다 쓰면 양쪽 블록 길이가 달라서 float로 맞추는걸 권장*/
+		float: left;
+		position: fixed; /*한쪽으로 고정되는데 다른 블록과 겹쳐진다 */
+		/* bottom:20px;
+		  left: 100px; 
+		  좌표를 픽셀로 계산 
+		  top,bottom,left,right*/		
+	}
+	section{
+		width:800px;
+		height: 100000px;/*어차피 자동으로 바뀜 임시*/		
+		float: left;
+		margin-left: 220px; /*position: fixed에서 겹친 부분 떼어주려면 씀*/
+	}
+	.container{
+		width: 1000px;
+		margin: 0 auto;
+	}
+	a{
+		text-decoration: none;
+		color: black;
+		width: 200px;
+		font-size: 20px;
+		line-height:20px;
+		padding:40px 0px;/*폰트 사이즈의 2배?*/
+		background-color: #e8e8e8;
+		border: 1px solid gray;
+		display: inline-block;
+		text-align: center;
+	}
+	ul{
+		list-style-type: none; /*li에 붙는 도형 삭제*/
+	}
+	figcaption{
+		font-size: 26px;
+		font-weight: bold;
+		margin: 10px 5px;
+	}	
+	</style>
+</head>
+<body>
+	<!--메뉴바-->
+<div class="container">
+	<nav>
+		<ul class = "back">
+			<li><a href"#maker1">Maker1</a></li>		
+			<li><a href"#maker2">Maker2</a></li>		
+			<li><a href"#maker3">Maker3</a></li>		
+			<li><a href"#maker4">Maker4</a></li>		
+			<li><a href"#maker5">Maker5</a></li>		
+			<li><a href"#maker6">Maker6</a></li>		
+			<li><a href"#maker7">Maker7</a></li>				
+		</ul>
+	</nav>
+
+	<section>
+	<figure id="maker1"><!--이미지를 그룹으로 묶을 때 주로 사용-->
+		<figcaption>Maker 1</figcaption>
+		<div class="product_list">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">	 		
+		</div>
+	
+	</figure>
+	<figure id="maker2"><!--이미지를 그룹으로 묶을 때 주로 사용-->
+		<figcaption>Maker 2</figcaption>
+		<div class="product_list">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">	 		
+		</div>
+	
+	</figure>
+	<figure id="maker3"><!--이미지를 그룹으로 묶을 때 주로 사용-->
+		<figcaption>Maker 3</figcaption>
+		<div class="product_list">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">	 		
+		<div class="product_list">
+	
+	</figure>
+	<figure id="maker4"><!--이미지를 그룹으로 묶을 때 주로 사용-->
+		<figcaption>Maker 4</figcaption>
+		<div class="product_list">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">	 		
+		</div>
+	
+	</figure>
+	<figure id="maker5"><!--이미지를 그룹으로 묶을 때 주로 사용-->
+		<figcaption>Maker 5</figcaption>
+		<div class="product_list">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">	 		
+		</div>
+	
+	</figure>
+	<figure id="maker6"><!--이미지를 그룹으로 묶을 때 주로 사용-->
+		<figcaption>Maker 6</figcaption>
+		<div class="product_list">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">	 		
+		</div>
+	
+	</figure>
+
+	<figure id="maker7"><!--이미지를 그룹으로 묶을 때 주로 사용-->
+		<figcaption>Maker 7</figcaption>
+		<div class="product_list">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">
+			<img alt = "" src = "resource/baking.jpg">	 		
+		</div>
+	
+		</figure>
+	</section>
+</div>
+</body>
+</html>

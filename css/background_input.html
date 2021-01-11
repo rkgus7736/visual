@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	input{
+		width: 300px;
+		height: 32px;
+		border: 1px solid #e8e8e8;
+		border-radius: 10px;
+		/*background-color: green;*/
+		background-image: url("resource/search.png");
+		background-repeat: no-repeat;/*아이콘이 여러개 나오는걸 방지*/
+		background-size: 28px 28px;
+		background-position: 10px center;
+		/* 아이콘을 좌상단에서 뗄 때 좌표=(x,y)
+		background-position: 10px 2px;
+		(left, center, right) + (top, center,bottom)	
+		*/
+		padding-left: 43px;
+	}
+	a{
+		background-image: url("resource/doc.png");
+		background-repeat: no-repeat;/*아이콘이 여러개 나오는걸 방지*/
+		background-size: 28px 28px;
+		/*이미지를 옮길거라면 backgroundposition사용(주로 왼쪽)*/
+		background-position: left center;	/*아이콘을 오른쪽 끝에 둘거라면 right center + padding right*/
+		padding-left:30px;/*아이콘을 눌렀을때도 인식되는지 (패딩영역에 포함되어서)*/
+		margin-left: 50px;/*원래 안들어감*/	
+	}
+	button{
+		width:100px;
+		height: 32px;
+		background-image: url("resource/close.png");
+		background-repeat: no-repeat;
+		background-size: 24px 24px;
+		background-position: 12px center;	
+		text-align: left;
+		padding-left: 44px;
+	}
+
+</style>
+</head>
+<body>
+	<input type="text" id="txt" placeholder="아이디 입력"><br>
+	<a href="#">word 첨부파일</a>
+	<button>닫기</button>
+
+</body>
+</html>

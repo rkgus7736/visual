@@ -1,0 +1,135 @@
+* html
+    웹문서 ---> 특정 형식을 이용해서 문서로 표현
+    TAG ---> 문서 디자인 형식을 나타냄
+    CSS ---> 문서에 대한 디자인 
+
+* font 
+-<br> : 줄바꿈 태그 (enter)
+-&nbsp; : 띄어쓰기,원하는만큼 계속 써줘야함 (생각보다 많이 쓰지 않음)
+-&copy; : 카피라이트 문자 ( ex) copy right 2020 &copy; cooperation )
+-<strong>,<b> : 문자열을 두껍게(BOLD) 해준다
+-<u>,<ins> : 문자열에 밑줄
+-<i>,<em> : 기울임 꼴
+-<h1>~<h6> : 제목 태그 -> 번호가 증가할수록 글꼴 크기가 작아짐 - ex) <h> 제목 태그 </h>
+-<p> : 문단 태그 -> 하나의 내용 단락 - ex) <p> 문단내용 </p>
+-<ol> : 순번이 있는 목록 - 숫자로 표현 -> ex) <ol start = "5"> - 5번부터 시작 start : 속성, "5" : 속성 값
+-<ul> : 순번이 없는 목록 - 도형으로 표현
+-<li> : 목록 태그 내용
+-<hr> : 구분선
+    ;li*4 : emet 기능 <li> 4개 자동완성 기능
+
+* IMG,AUDIO,VIDEO
+-<img> : 이미지 태그 (src : 이미지 경로 , alt : 대체문자열)
+-<audio> : 오디오 태그 (src : 파일경로, controls : 컨트롤러, loop : 반복)
+-<video> : 동영상 태그 (src : 파일경로, controls : 컨트롤러, loop : 반복)
+
+* HYPER LINK
+-<a> : 하이퍼링크 태그 
+    target="_blank" - 새로운 탭으로 생성됨
+    href : 이동할 파일 경로
+   *네임앵커 사용시 아이디를 이용하여 이동할 스크롤바 위치를 지정
+    <a id="top"></a>  <-- 이동할 위치
+    <a href="#top">맨위로</a>
+    href="#아이디속성값"
+    href="sms:010-0000-0000"
+    href="tel:010-0000-0000"
+    href="mailto:test@gmail.com"
+
+* TABLE
+-<table> : 테이블 태그
+-<tr> : 테이블의 행 태그
+-<td> : 테이블의 열 태그
+    <td colspan="3">1</td> : 1번 td를 가로로 3칸짜리로  
+    <td row span="2">6</td> : 6번 td를 세로로 두칸으로 
+    <td rowspan ="2" colspan="3">16</td> : 세로 2칸,가로 3칸 함께 사용가능
+-<th> : 테이블의 열 태그 (제목)
+-<caption> : 테이블 제목
+-<thead> : 테이블의 머리글 영역
+-<tbody> : 테이블의 본문 영역
+-<tfoot> : 테이블의 꼬리말 영역
+
+* FORM
+-<input type="date"> : 날짜 선택  
+-<input type="datetime-local"> : 날짜 시간까지
+-<input type="color"> : 색 선택
+-<input type="number" min = "0" max = "30" step = "3"> : 번호 선택
+-<input type="range" max="100" value = "90" > : 슬라이드
+-<progress max="100" value="10"> : 진행사항 고정해두는 것
+-<input type = "reset" value = "초기화 버튼">
+-<label> :
+
+-<div> : block 단위 영역 지정 태그
+-<span> : inline 단위 영역 지정 태그
+
+
+ *폼 (Form) TAG : 웹에서 사용자에게 입력을 받는 태그 (버튼, 텍스트(text,password,textarea), 첨부파일,체크박스,라디오버튼,select 등)
+  [required : 필수로 입력하게 만들기
+   maxlength = " " : 최대 글자 수
+   minlength = " " : 최소 글자 수
+   autofocus : input창에 깜빡깜빡하는 기능
+   placeholder = " " : input창 안에 입력 전 보여지는 글자
+   checked : 체크창에서 미리 체크해둘 사항
+   selected : 선택창에서 먼저 선택되어있을 사항 ]
+
+*태그 id 속성 : 태그들을 구별 할 수 있는 식별자 (중복 X), 모든 태그에 id 속성을 넣을 필요는 X
+                주로 기능이 있어야 되는 태그나, 디자인 요소가 필요한 태그에 아이디 값을 지정
+
+*버튼 : 총 3가지 버튼의 타입이 있다
+    -submit : 폼에 입력한 내용을 action에 지정한 서버 페이지로 전송하는 버튼
+    -reset : 폼에 입력한 내용을 초기상태  로 초기화하는 버튼
+    -button : 아무런 기능이 없는 버튼 (디자인만 되어있는 상태) -> 차후에 js로 기능을 부여
+
+
+* 네임앵커에서 style : css를 정의해주는것 
+<style> 
+        p{
+            width: 200px; 
+        }
+</style> : p 태그를 200픽셀로 바꾸어주겠다.
+
+
+첨부파일 넣을 때
+-width = " " : 가로길이
+-height = " " : 세로길이
+-alt = " " : 엑박이 떴을때 보여질 글자
+-controls loop autoplay를 속성값으로 쓰고 자동재생을 시키지 않을 영상이 있다면 소스코드 뒤에 =false 붙이면 됨
+
+
+
+--태그를 같이 사용할때는 열어준 순서의 반대로 닫아줘야 함 : ex) <b>,<u>,<i> 예시 </i>,</u>,</b>
+
+
+* 태그는 크게 block tag, inline tag 두가지로 나눌수있음
+    block tag : 해당 태그를 출력하고 나면 줄바꿈 처리가 됨 , 자동으로 줄바꿈이 됨 -->  하나의 문단으로 취급 
+    inline tag : 해당 태그들을 글자로 취급 --> 출력을 해도 줄바꿈 처리 X
+
+
+
+* 의미 없는 텍스트 생성
+구글에 한글 로렘입숨 : http://guny.kr/stuff/klorem/
+
+* 단축키
+    Alt + Shift + f : 자동정렬
+
+   
+* 네임앵커 사용시 아이디를 이용하여 이동할 스크롤바 위치를 지정
+    <a id = "top"> </a> <-- 이동할 위치
+    <a href = "#top"> 맨위로 </a>
+    href = "# 아이디 속성값"
+    
+* 네임앵커에서 style : css를 정의해주는것 
+    <style> 
+            p{
+              width: 200px; 
+            }
+    </style> : p 태그를 200픽셀로 바꾸어주겠다.
+
+
+
+
+이미지 : jpg,png(고해상도 이미지,사진,배경화면), gif(저해상도-불릿(도형),아이콘,로고에 사용)
+음악 : mp3,ogg(직접적으로 재생가능), acc,flac(직접 재생 불가능) - ogg는 스트리밍이 불가능,mp3,acc 스트리밍 가능
+동영상 : avi, wmv,mkv,ts,tp,mp4
+
+* 페이지 접속 방법: http://rkgus7736.dothome.co.kr/파일명
+*404 error : 페이지 경로를 잘못 찾은 것 (페이지 없음)
